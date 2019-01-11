@@ -2,9 +2,9 @@
 /* https://css-tricks.com/examples/ShapesOfCSS/          */
 .heart {
     position: relative;
-    width: 100px;
-    height: 90px;
-    margin: 30px;
+    width: 10px;
+    height: 6px;
+    margin: 3px;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     -o-transform: scale(1);

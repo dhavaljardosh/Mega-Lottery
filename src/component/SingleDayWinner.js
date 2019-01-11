@@ -1,10 +1,11 @@
 import React from 'react'
 import moment from 'moment'
-import '../Animate.css'
+// import '../Animate.css'
+import '../Responsive.css'
 
 export default(props) => {
-    const {latestWinningNumbers_style, megaNumber_style, otherWinningNumbers_style} = style;
-    console.log(props.drawDate);
+    let dd = moment(props.drawDate).format('ll').split(' ');
+    dd[1] = dd[1].slice(0,dd[1].length-1)
     if (props.index === 0) {
         return (
             <div
@@ -14,34 +15,18 @@ export default(props) => {
             }}>
                 <div className="block">
                     <div>
-                        <p>Winning Numbers</p>
+                        <p className="titleFontSize">Winning Numbers</p>
                     </div>
                     <div
-                        className="z-depth-4"
-                        style={{
-                        display: 'flex',
-                        justifyContent:'space-around',
-                        background: 'darkorange',
-                        borderTopLeftRadius: 20,
-                        borderBottomLeftRadius: 20,
-                        borderTop: '2px solid black',
-                        borderBottom: '2px solid black',
-                        borderLeft: '2px solid black'
-                    }}>
+                        className="z-depth-4 highlightedBlockLeft">
                         <div
-                            style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            margin: '0 20px',
-                            color: 'white',
-                            textShadow: '1px 1px 1px black',
-                            fontWeight: 'bolder'
-                        }}>{moment(props.drawDate).format('ll')}</div>
+                            className="fontOfDate"
+                        >{dd[0]} {dd[1]}</div>
                         <div style={{display:'flex', alignSelf:'flex-end'}}>
                         {props
                             .winningNumbers
                             .map((single) => {
-                                return <div className="heart animated css" style={latestWinningNumbers_style}>{single}</div>
+                                return <div className="heart animated css latestWinningNumbers">{single}</div>
                             })}
                         </div>
                         
@@ -50,19 +35,10 @@ export default(props) => {
                 </div>
                 <div>
                     <div>
-                        <p>Mega Ball</p>
+                        <p className="titleFontSize_mega">Mega</p>
                     </div>
-                    <div
-                        style={{
-                        display: 'flex',
-                        background: 'darkorange',
-                        borderTopRightRadius: 20,
-                        borderBottomRightRadius: 20,
-                        borderRight: '2px solid black',
-                        borderTop: '2px solid black',
-                        borderBottom: '2px solid black'
-                    }}>
-                        <div style={megaNumber_style} className="heart animated css">{props.megaBall}</div>
+                    <div className="highlightedBlockRight">
+                        <div className='megaNumber heart animated css' >{props.megaBall}</div>
                     </div>
 
                 </div>
@@ -70,72 +46,25 @@ export default(props) => {
             </div>
         )
     } else {
+        let dd = moment(props.drawDate).format('ll').split(' ');
+    dd[1] = dd[1].slice(0,dd[1].length-1)
         return (
             <div style={{
                 display: 'flex',
                 justifyContent:'space-around'
 
             }}>
-                <div
-                    style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    margin: '0 20px',
-                    color: 'black',
-                    fontWeight: 'bolder'
-                }}>{moment(props.drawDate).format('ll')}</div>
+                <div className="fontOfDate black-text">{dd[0]} {dd[1]}</div>
                 <div style={{display:'flex'}}>
                 {props
                     .winningNumbers
                     .map((single) => {
-                        return <div style={otherWinningNumbers_style}>{single}</div>
+                        return <div className='otherWinningNumbers'>{single}</div>
                     })}
                 </div>
                 
-                <div style={megaNumber_style}>{props.megaBall}</div>
+                <div className='megaNumber heart css animated'>{props.megaBall}</div>
             </div>
         )
-    }
-}
-
-const style = {
-    latestWinningNumbers_style: {
-        height: 50,
-        width: 50,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        background: 'royalblue',
-        margin: 10,
-        border: '2px solid darkblue',
-        borderRadius: '50%',
-        fontSize: 30,
-        color: 'white'
-    },
-    megaNumber_style: {
-        height: 50,
-        width: 50,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        background: 'darkgreen',
-        margin: 10,
-        border: '2px solid black',
-        borderRadius: '50%',
-        fontSize: 30,
-        color: 'white'
-    },
-    otherWinningNumbers_style: {
-        height: 50,
-        width: 50,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        background: 'lightblue',
-        margin: 10,
-        border: '2px solid black',
-        borderRadius: '50%',
-        fontSize: 30,
-        color: 'black'
     }
 }

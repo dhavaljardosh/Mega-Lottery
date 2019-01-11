@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import SingleDayWinner from './SingleDayWinner';
-
+import '../Responsive.css'
 export default class LotteryData extends Component {
     constructor() {
         super();
@@ -27,13 +27,7 @@ export default class LotteryData extends Component {
         return (
             <div style={style.outerBox}>
                 <div
-                className="z-index-d"
-                    style={{
-                    background: 'white',
-                    marginTop: 40,
-                    padding: '20px 30px',
-                    borderRadius: 15,
-                }}>
+                className="card z-index-4 outerBox">
                     {this
                         .state
                         .top_four_data

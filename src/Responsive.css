@@ -1,0 +1,317 @@
+.latestWinningNumbers {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: royalblue;
+    margin: 5px;
+    border: 2px solid darkblue;
+    border-radius: 50%;
+    font-size: 26px;
+    color: white;
+}
+.megaNumber {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: darkgreen;
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 50%;
+    font-size:30px;
+    color: white;
+}
+.otherWinningNumbers {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: lightblue;
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 50%;
+    font-size: 30px;
+    color: black;
+}
+.fontOfDate {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    color: white;
+    text-shadow: 0px 3px 0px rgba(0,0,0,0.3);
+    font-weight: bolder;
+    font-size: 20px;
+    width:100px;
+}
+
+.outerBox {
+    display: flex;
+    border-radius: 20px;
+    padding:10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titleFontSize {
+    font-size: 20px;
+}
+.titleFontSize_mega {
+    font-size: 20px;
+}
+
+.highlightedBlockLeft {
+    display: flex;
+    justify-content: space-around;
+    background: darkorange;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+}
+.highlightedBlockRight{
+    display: flex;
+    background: darkorange;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black
+}
+@media (height: 300px) and (width: 300px) {
+    /* CSS stuff */
+    .latestWinningNumbers {
+        height: 25px;
+        width: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: royalblue;
+        margin: 5px;
+        border: 1px solid black;
+        border-radius: 50%;
+        font-size: 16px;
+        color: white;
+    }
+    .megaNumber {
+        height: 25px;
+        width: 25px;
+        min-width: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: darkgreen;
+        margin: 5px;
+        border: 1px solid black;
+        border-radius: 50%;
+        font-size: 16px;
+        color: white;
+    }
+    .otherWinningNumbers {
+        height: 25px;
+        width: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: lightblue;
+        margin: 5px;
+        border: 1px solid black;
+        border-radius: 50%;
+        font-size: 16px;
+        color: black;
+    }
+    .fontOfDate {
+        display: flex;
+        align-items: center;
+        /* margin: 0 20px; */
+        color: white;
+        text-shadow: 0px 0.2px 0px rgba(0,0,0,0.3);
+        font-weight: bolder;
+        font-size: 10px;
+        /* min-width:40px; */
+        width:40px;
+    }
+    .outerBox {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .titleFontSize {
+        font-size: 14px;
+        margin-left: 90px;
+    }
+
+    .titleFontSize_mega {
+        font-size: 14px;
+        position: relative;
+        opacity: 0;
+    }
+
+    .highlightedBlockLeft {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+    }
+    .highlightedBlockRight{
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-right: 1px solid black;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black
+    }
+}
+
+@media (height: 600px) and (width: 600px) {
+    /* CSS stuff */
+    .latestWinningNumbers {
+        height: 60px;
+        width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: royalblue;
+        margin: 5px;
+        border: 2px solid darkblue;
+        border-radius: 50%;
+        font-size: 30px;
+        color: white;
+    }
+    .megaNumber {
+        height: 60px;
+        width: 60px;
+        min-width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: darkgreen;
+        margin: 5px;
+        border: 2px solid black;
+        border-radius: 50%;
+        font-size: 30px;
+        color: white;
+    }
+    .otherWinningNumbers {
+        height: 60px;
+        width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: lightblue;
+        margin: 5px;
+        /* border: 2px solid black; */
+        border-radius: 50%;
+        font-size: 30px;
+        color: black;
+    }
+    .fontOfDate {
+        display: flex;
+        align-items: center;
+        margin: 0 20px;
+        color: white;
+        text-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+        font-weight: bolder;
+        font-size: 20px;
+        width:70px;
+    }
+    .outerBox {
+        width: 95vw;
+        height:60vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top:15vh;
+    }
+    .titleFontSize {
+        font-size: 20px;
+        margin-left: 120px;
+    }
+
+    .titleFontSize_mega {
+        font-size:20;
+        position: relative;
+        opacity: 100;
+        right:-10px;
+    }
+
+    .highlightedBlockLeft {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        border-left: 2px solid black;
+    }
+    .highlightedBlockRight{
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-right: 2px solid black;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black
+    }
+}
+@media (height: 720px) and (width: 1200px) {
+    /* CSS stuff */
+    .outerBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .latestWinningNumbers {
+        height: 60px;
+        width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: royalblue;
+        margin: 5px;
+        border: 2px solid darkblue;
+        border-radius: 50%;
+        font-size: 40px;
+        color: white;
+    }
+    .megaNumber {
+        height: 60px;
+        width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: darkgreen;
+        margin: 5px;
+        border: 2px solid black;
+        border-radius: 50%;
+        font-size: 40px;
+        color: white;
+    }
+    .otherWinningNumbers {
+        height: 60px;
+        width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: lightblue;
+        margin: 5px;
+        border: 2px solid black;
+        border-radius: 50%;
+        font-size: 40px;
+        color: black;
+    }
+    .fontOfDate {
+        display: flex;
+        align-items: center;
+        margin: 0 20px;
+        color: white;
+        text-shadow: 0px 0px 1px rgba(0,0,0,0.4);
+        font-weight: bolder;
+        font-size: 20px;
+    }
+    .titleFontSize{
+        position: relative;
+        left:160px;
+    }
+}
